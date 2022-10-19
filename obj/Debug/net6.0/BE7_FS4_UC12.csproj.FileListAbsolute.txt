@@ -1,0 +1,15 @@
+C:\Users\sbrop\OneDrive\Documentos\UC12\BE7_FS4_UC12\bin\Debug\net6.0\BE7_FS4_UC12.exe
+C:\Users\sbrop\OneDrive\Documentos\UC12\BE7_FS4_UC12\bin\Debug\net6.0\BE7_FS4_UC12.deps.json
+C:\Users\sbrop\OneDrive\Documentos\UC12\BE7_FS4_UC12\bin\Debug\net6.0\BE7_FS4_UC12.runtimeconfig.json
+C:\Users\sbrop\OneDrive\Documentos\UC12\BE7_FS4_UC12\bin\Debug\net6.0\BE7_FS4_UC12.dll
+C:\Users\sbrop\OneDrive\Documentos\UC12\BE7_FS4_UC12\bin\Debug\net6.0\BE7_FS4_UC12.pdb
+C:\Users\sbrop\OneDrive\Documentos\UC12\BE7_FS4_UC12\obj\Debug\net6.0\BE7_FS4_UC12.csproj.AssemblyReference.cache
+C:\Users\sbrop\OneDrive\Documentos\UC12\BE7_FS4_UC12\obj\Debug\net6.0\BE7_FS4_UC12.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sbrop\OneDrive\Documentos\UC12\BE7_FS4_UC12\obj\Debug\net6.0\BE7_FS4_UC12.AssemblyInfoInputs.cache
+C:\Users\sbrop\OneDrive\Documentos\UC12\BE7_FS4_UC12\obj\Debug\net6.0\BE7_FS4_UC12.AssemblyInfo.cs
+C:\Users\sbrop\OneDrive\Documentos\UC12\BE7_FS4_UC12\obj\Debug\net6.0\BE7_FS4_UC12.csproj.CoreCompileInputs.cache
+C:\Users\sbrop\OneDrive\Documentos\UC12\BE7_FS4_UC12\obj\Debug\net6.0\BE7_FS4_UC12.dll
+C:\Users\sbrop\OneDrive\Documentos\UC12\BE7_FS4_UC12\obj\Debug\net6.0\refint\BE7_FS4_UC12.dll
+C:\Users\sbrop\OneDrive\Documentos\UC12\BE7_FS4_UC12\obj\Debug\net6.0\BE7_FS4_UC12.pdb
+C:\Users\sbrop\OneDrive\Documentos\UC12\BE7_FS4_UC12\obj\Debug\net6.0\BE7_FS4_UC12.genruntimeconfig.cache
+C:\Users\sbrop\OneDrive\Documentos\UC12\BE7_FS4_UC12\obj\Debug\net6.0\ref\BE7_FS4_UC12.dll
