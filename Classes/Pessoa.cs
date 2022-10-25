@@ -7,7 +7,7 @@ namespace BE7_FS4_UC12.Classes
     {
 
         public string ?nome { get; set; }
-        public string ?endereco { get; set; }
+        public Endereco ?endereco { get; set; }
         public float ?rendimento { get; set; }
         
         
