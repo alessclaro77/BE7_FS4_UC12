@@ -11,7 +11,25 @@ public string ?razaoSocial { get; set; }
         //
         public override float PagarImposto(float rendimento)
         {
-            throw new NotImplementedException();
+             /*Escala:
+            -ate 1500 (conciderando 1500) Reais - - 3% imposto
+            -de 1500 ate 3500 (conciderando 3500) Reais - 5% imposto
+            -de 3500 ate 6000 (conciderando 6000) Reais - 7% imposto
+            acima de 6000 - 9% imposto
+            */
+            if (rendimento <= 1500)
+            {
+                return (rendimento / 100) * 3;                
+            }
+            else if(rendimento > 1500 && rendimento <= 3500){
+                return (rendimento / 100) * 5;
+            }
+            else if(rendimento > 3500 && rendimento <= 6000){
+                return (rendimento/100) * 7;
+            }
+            else{
+                return (rendimento / 100) * 9;
+            }            
         }
 
         public bool ValidarCnpj(string cnpj)

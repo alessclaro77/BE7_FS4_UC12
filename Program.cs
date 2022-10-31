@@ -52,7 +52,7 @@ __________________________________________________________________
             Endereco novoEnd = new Endereco();
             PessoaFisica metodoPF = new PessoaFisica();
             novaPF.nome = "Luiz";
-            novaPF.dataNascimento = "18/02/1982";
+            novaPF.dataNascimento = "18/02/2012";
             novaPF.cpf = "1234578900";
             novaPF.rendimento = 600.0f;
             novoEnd.logradouro = "Alameda Barao de Limeira";
@@ -63,7 +63,8 @@ __________________________________________________________________
             Console.WriteLine(@$"
                 Nome: {novaPF.nome}
                 Endereco: {novaPF.endereco.logradouro}, {novaPF.endereco.numero}
-                Maior de idade: {metodoPF.validarDataNascimento(novaPF.dataNascimento)}
+                Maior de idade: {(metodoPF.validarDataNascimento(novaPF.dataNascimento)? "Sim": "Não")}
+                Taxa de Imposto a Ser Pago: {metodoPF.PagarImposto(novaPF.rendimento).ToString("C")}
                 ");
             Console.WriteLine($"Aperte ENTER para continuar");
             Console.ReadLine();
@@ -75,7 +76,7 @@ __________________________________________________________________
             novaPj.nome = "NomePj";
             novaPj.cnpj = "00.000.000/0001-00";
             novaPj.razaoSocial = "razão Social Pj";
-            novaPj.rendimento = 8000.5f;
+            novaPj.rendimento = 5000.0f;
             novoEndPj.logradouro = "Alameda Barao de Limeira";
             novoEndPj.numero = 539;
             novoEndPj.complemento = "Senai Informatica";
@@ -85,7 +86,9 @@ __________________________________________________________________
                 nome: {novaPj.nome}
                 Razão Social: {novaPj.razaoSocial}
                 CNPJ: {novaPj.cnpj}
-                CNPJ é Valido: {metodoPj.ValidarCnpj(novaPj.cnpj)}");
+                CNPJ é Valido: {(metodoPj.ValidarCnpj(novaPj.cnpj)? "Sim": "Não")}
+                Taxa de Imposto a Ser Pago: {metodoPj.PagarImposto(novaPj.rendimento).ToString("C")}
+                ");
             Console.WriteLine($"Aperte ENTER para continuar");
             Console.ReadLine();
             break;
