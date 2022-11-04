@@ -14,16 +14,18 @@
 To install additional .NET runtimes: https://aka.ms/dotnet-download
 
 ## Organização do projeto
-- Alexander Claro
+- Menu com opções de Pessoa Física e Jurídica
+- Submenu para cadastro e impressão 
 
 ## Pré-requisitos de instalação
 - .NET runtime 6.0 ou superior
 
-## Execução da aplicação
-- Executar arquivo run.bat
-
 ## Erros comuns
- - CPF pode ser salvo sem padrão no arquivo txt
+ - CPF ou CNPJ pode ser salvo sem padrão
  
 ## Contribuição
+- Alexander Claro
 - Professor Luiz Lozano: https://github.com/professorlucianoz
+
+## Estatus do Projeto
+<p align="center"><img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/></p>
