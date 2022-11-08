@@ -8,6 +8,7 @@ Console.WriteLine(@$"
 *                                                                *
 ******************************************************************
 ");
+
 //código comentado evitar repetição - criado método estático
 /*
 Console.BackgroundColor = ConsoleColor.DarkBlue;
@@ -28,6 +29,8 @@ BarraCarregamento("Carregando", 100);
 
 List<PessoaFisica> listaPF = new List<PessoaFisica>();
 List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
+
+
 
 string? opcao;
 
@@ -79,7 +82,7 @@ __________________________________________________________________
 
                         Console.WriteLine($"Digite o nome da pessoa que deseja cadastrar.");
                         novaPF.nome = Console.ReadLine();
-
+                        /*
                         bool dataValida;
 
                         do
@@ -98,11 +101,11 @@ __________________________________________________________________
                                 Console.ResetColor();
                             }
                         } while (dataValida == false);                      
-                
+                        */                
 
                         Console.WriteLine($"Digite o número do CPF: ");
                         novaPF.cpf = Console.ReadLine();
-
+                        /*
                         Console.WriteLine($"Digite o rendimento mensal (Apenas números): ");
                         novaPF.rendimento = float.Parse(Console.ReadLine());
 
@@ -126,7 +129,14 @@ __________________________________________________________________
                         }
 
                         novaPF.endereco = novoEnd;
-                        listaPF.Add(novaPF);
+                        //listaPF.Add(novaPF);
+                        */
+                        using (StreamWriter sw = new StreamWriter($"{novaPF.nome}.txt"))
+                        {
+                            sw.WriteLine($"{novaPF.nome}");
+                            sw.WriteLine($"{novaPF.cpf}");
+                        }
+                        
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.WriteLine($"Cadastro realizado com sucesso!!");
                         Thread.Sleep(4000);
@@ -134,6 +144,7 @@ __________________________________________________________________
                         break;
                     case "2":
                         Console.Clear();
+                        /*
                         if (listaPF.Count > 0){
                             foreach (PessoaFisica cadaPessoa in listaPF)
                             {
@@ -152,6 +163,20 @@ __________________________________________________________________
                             Console.WriteLine($"Lista vazia!!!");
                             Thread.Sleep(3000);
                         }
+                        */
+                        
+                        using(StreamReader sr = new StreamReader($"alex.txt"))
+                                {
+                                string linha;
+                                while((linha = sr.ReadLine())!= null)
+                                {
+                                    Console.WriteLine($"{linha}");
+
+                                }                           
+                            }
+                        Console.WriteLine($"Aperte ENTER para continuar......");
+                        Console.ReadLine();
+                        
                         break;
                     case "0":
                         break;
