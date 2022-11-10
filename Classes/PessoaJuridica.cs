@@ -5,10 +5,12 @@ namespace BE7_FS4_UC12.Classes
 {
     public class PessoaJuridica : Pessoa, IPessoaJuridica
     {
-public string ?cnpj { get; set; }
-public string ?razaoSocial { get; set; }
+        public string ?cnpj { get; set; }
+        public string ?razaoSocial { get; set; }
 
-        //
+        public string caminho { get; private set; } = "Database/PessoaJuridica.csv";
+
+
         public override float PagarImposto(float rendimento)
         {
              /*Escala:
@@ -52,6 +54,33 @@ public string ?razaoSocial { get; set; }
                 }          
             } 
         return false;          
+        }
+        public void Inserir(PessoaJuridica pj)
+        {
+            verificarPastaArquivo(caminho);
+            string[] pjString = {$"{pj.nome}, {pj.cnpj}, {pj.razaoSocial}"};
+            File.AppendAllLines(caminho, pjString);
+        }
+
+        public List<PessoaJuridica> Ler() 
+        {
+          List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
+          
+          string[] linhas = File.ReadAllLines(caminho);
+          
+          foreach(string cadaLinha in linhas)
+          {
+            string[] atributos = cadaLinha.Split(",");
+            
+            PessoaJuridica cadaPj = new PessoaJuridica();
+            
+            cadaPj.nome = atributos[0];
+            cadaPj.cnpj = atributos[1];
+            cadaPj.razaoSocial = atributos[2];
+
+            listaPj.Add(cadaPj);
+          } 
+          return listaPj;   
         }
     }
 }

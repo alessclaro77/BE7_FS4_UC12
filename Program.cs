@@ -28,7 +28,7 @@ Console.ResetColor();
 BarraCarregamento("Carregando", 100);
 
 List<PessoaFisica> listaPF = new List<PessoaFisica>();
-List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
+//List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
 
 
 
@@ -193,7 +193,43 @@ __________________________________________________________________
             break;
         case "2":
             
+            /*PessoaJuridica metodoPj = new PessoaJuridica();
+            PessoaJuridica novaPj = new PessoaJuridica();
+            Endereco novoEndPj = new Endereco();
+
+            novaPj.nome = "NomePj";
+            novaPj.cnpj = "00000000000100";
+            novaPj.razaoSocial = "Razao Social Pj";
+            novaPj.rendimento = 8000.5f;
+
+            novoEndPj.logradouro = "Alameda BArao de Limeira";
+            novoEndPj.numero = 539;
+            novoEndPj.complemento = "Senai Informatica";
+            novoEndPj.endComercial = true;
+
+            novaPj.endereco = novoEndPj;
+
+            metodoPj.Inserir(novaPj);
+            
+            List<PessoaJuridica> listaPj = metodoPj.Ler();
+
+            foreach(PessoaJuridica cadaItem in listaPj)
+            {
+                Console.Clear();
+                Console.WriteLine(@$"
+                    Nome: {novaPj.nome}
+                    Razao Social: {novaPj.razaoSocial}
+                    CNPJ: {novaPj.cnpj}
+                ");
+                
+            Console.WriteLine($"Aperte 'Enter' para continuar");
+            Console.ReadLine();
+            }*/
+            
+            
             PessoaJuridica metodoPj = new PessoaJuridica();
+            PessoaJuridica novaPj = new PessoaJuridica();
+            Endereco novoEndPj = new Endereco();
             
             string? opcaoPj;
             
@@ -212,13 +248,12 @@ __________________________________________________________________
 ******************************************************************
 ");
                 opcaoPj = Console.ReadLine();
+                
 
                 switch (opcaoPj)
                 {
                     case "1":
-                        PessoaJuridica novaPj = new PessoaJuridica();
-                        Endereco novoEndPj = new Endereco();
-
+                        
                         Console.WriteLine($"Digite o nome da pessoa jurídica que deseja cadastrar.");
                         novaPj.nome = Console.ReadLine();
                         Console.WriteLine($"Digite o número do CNPJ: ");
@@ -227,6 +262,7 @@ __________________________________________________________________
                         novaPj.razaoSocial = Console.ReadLine();  
                         Console.WriteLine($"Digite o rendimento mensal (Apenas números): ");
                         novaPj.rendimento = float.Parse(Console.ReadLine()); 
+                       
                         Console.WriteLine($"Digite o logradouro: ");
                         novoEndPj.logradouro = Console.ReadLine(); 
                         Console.WriteLine($"Digite o Número: ");
@@ -234,6 +270,7 @@ __________________________________________________________________
                         Console.WriteLine($"Digite o Complemento (Aperte ENTER para vazio): ");
                         novoEndPj.complemento = Console.ReadLine(); 
                         Console.WriteLine($"Este endereço é comercial? S ou N");
+                        
                         string endCom = Console.ReadLine().ToUpper();
 
                         if (endCom == "S"){
@@ -244,7 +281,8 @@ __________________________________________________________________
                         }  
 
                         novaPj.endereco = novoEndPj;
-                        listaPj.Add(novaPj);
+                        metodoPj.Inserir(novaPj);
+                        //listaPj.Add(novaPj);
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.WriteLine($"Cadastro realizado com sucesso!!");
                         Thread.Sleep(4000);
@@ -252,7 +290,11 @@ __________________________________________________________________
                         break;
 
                     case "2":
+                       
                         Console.Clear();
+                        
+                        List<PessoaJuridica> listaPj = metodoPj.Ler();
+                        
                         if (listaPj.Count > 0){
                             foreach (PessoaJuridica cadaPessoaPj in listaPj)
                             {
@@ -270,7 +312,8 @@ __________________________________________________________________
                         else{
                             Console.WriteLine($"Lista vazia!!!");
                             Thread.Sleep(3000);
-                        }                                               
+                        }   
+                                                                
                         break;
                     case "0":
                         break;
@@ -281,6 +324,7 @@ __________________________________________________________________
                         break;
                 }              
             } while (opcaoPj != "0");
+            
         break;
         case "0":
             Console.Clear();
